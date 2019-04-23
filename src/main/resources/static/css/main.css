@@ -1,0 +1,10 @@
+nav {
+    background-color: #073642!important;
+    height: 6rem;
+    background-image: url("horse.jpeg");
+    background-repeat: repeat-x;
+}
+
+nav a {
+    padding-top: 2.5rem !important;
+}
