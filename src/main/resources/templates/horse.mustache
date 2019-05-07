@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Horses for Sale</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <nav class="nav sticky-top">
+      <a class="nav-link active"  href="/">Home</a>
+      <a class="nav-link" href="create-post"> Sell your Horse? </a>
+      <a class="nav-link" href="sign-up"> Sign Up</a>
+       <div></div>
+    </nav>
+
+    <body>
+        <div class="container border pt-4 mt-5 pb-3">
+            {{# horse}}
+            <div class="d-flex bd-highlight mb-3 border-bottom">
+              <div class="mr-auto p-2 bd-highlight">
+                <p> {{ owner }} </p>
+                <p> {{ name }}  </p>
+                <p> {{ location }} </p>
+                <p> {{ description }} </p>
+                <form action="/conversation" method="POST">
+                    <input type="hidden" name="horse_id" value={{id}} >
+                    <button class="btn btn-primary" href="conversation"> Contact Owner </button>
+                </form>
+              </div>
+              <div class="p-2 bd-highlight"></div>
+              <div class="p-2 bd-highlight">
+                <img src="{{ horse_pic_url }}">
+              </div>
+                                </div>
+            {{ /horse }}
+        </div>
+    </body>
+</html>

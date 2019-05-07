@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Horse Trading</title>
+        <title>Horses for Sale</title>
         <meta charset="utf-8" />
         <meta
             name="viewport"
@@ -15,25 +15,28 @@
         />
     </head>
     <nav class="nav">
-      <a class="nav-link active" href="#"> Sell your Horse? </a>
-      <a class="nav-link" href=""></a>
-      <a class="nav-link" href="#">Link</a>
-       <div></div>
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link active" href="create-post"> Sell your Horse? </a>
+      <a class="nav-link" href="sign-up">Sign Up</a>
     </nav>
 
     <body>
-        <form method="POST" action="">
-             <h1>Horse Name: </h1>
-             <input type="text">
+        <div class="container border shadow mt-4 mx-auto col-3">
+            <form action="/create-post" method="POST">
+                 <h4 class="mt-2">Horse Name: </h4>
+                 <input type="text" name="name" required>
 
-             <h1> Description: </h1>
-             <input type="text">
+                 <h4 class="mb-2"> Location: </h4>
+                 <input type="text" name="location" required>
 
-            <h1>Location: </h1>
-             <input type="text">
+                 <h4 class="mb-2"> Description: </h4>
+                 <input type="text" name="description" required>
 
-             <h1>Image: </h1>
-             <input type="text">
-        </form>
+                 <h4>Image: </h4>
+                 <input type="text" name="horse_pic_url" required>
+
+                 <button class="btn btn-info ml-5"> Submit </button>
+            </form>
+        </div>
     </body>
 </html>

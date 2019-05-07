@@ -1,14 +1,16 @@
 package com.rayturner.horsetrading.forms;
 
-public class PostForm {
-    public Integer id;
+public class OwnerForm {
     public String username;
     public String password;
     public String email;
     public String location;
 
-    public Integer getId() {
-        return id;
+    public OwnerForm(String username, String password, String email, String location) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.location = location;
     }
 
     public String getUsername() {
@@ -26,6 +28,7 @@ public class PostForm {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getEmail() {
         return email;
     }
@@ -43,6 +46,6 @@ public class PostForm {
     }
 
     public boolean is_valid(){
-        return  username != null && location != null  && email != null;
+        return username != null &&  password != null &&  email != null && location != null;
     }
 }

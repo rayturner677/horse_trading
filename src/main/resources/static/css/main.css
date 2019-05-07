@@ -8,3 +8,30 @@ nav {
 nav a {
     padding-top: 2.5rem !important;
 }
+.message-input {
+    position: fixed !important;
+    bottom: 0;
+    width: 12rem;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 600px){
+    img {
+    width: 85%;
+    height: 85%;
+    }
+}
+
+.messages {
+    padding: 1rem;
+}
+
+.messages > p {
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+.login-btn {
+    margin-left: 62rem;
+}

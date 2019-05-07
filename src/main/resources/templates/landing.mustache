@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Horse Trading</title>
+        <title>Horses for Sale</title>
         <meta charset="utf-8" />
         <meta
             name="viewport"
@@ -14,17 +14,35 @@
             crossorigin="anonymous"
         />
     </head>
-    <nav class="nav">
-      <a class="nav-link active" href="#"> Sell your Horse? </a>
-      <a class="nav-link" href=""></a>
-      <a class="nav-link" href="#">Link</a>
+    <nav class="nav sticky-top">
+      <a class="nav-link active"  href="/">Home</a>
+      <a class="nav-link" href="create-post"> Sell your Horse? </a>
+      <a class="nav-link" href="sign-up"> Sign Up</a>
        <div></div>
     </nav>
 
-
-
-
     <body>
-        <h1> Hey {{username}} <h1>
+    {{#username}}
+        <h2 class="pt-2 pl-2 "> Hey {{.}} </h2>
+        {{/username}}
+        <div class="container">
+            <div class="border shadow">
+                {{#horses}}
+                    <div class="d-flex bd-highlight mb-3 border-bottom">
+                      <div class="mr-auto p-2 bd-highlight">
+                        <p> {{ owner }} </p>
+                        <p> {{ name }}  </p>
+                        <p> {{ location }} </p>
+                        <p> {{ description }} </p>
+                        <a class="btn btn-primary" href="/{{id}}"> View Horse </a>
+                      </div>
+                      <div class="p-2 bd-highlight"></div>
+                      <div class="p-2 bd-highlight">
+                        <img src="{{ horse_pic_url }}">
+                      </div>
+                    </div>
+               {{/horses}}
+            </div>
+        </div>
     </body>
 </html>
